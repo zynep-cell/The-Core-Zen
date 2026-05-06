@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Core Zen | Flow & Focus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f0f4f8;
+            --card-bg: rgba(255, 255, 255, 0.7);
+            --text-color: #5a6b7d;
+            --accent-pink: #f7d9d9;
+            --accent-blue: #d9e4f7;
+            --accent-mint: #d9f7ed;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            animation: fadeIn 2s ease-in;
+        }
+
+        header h1 {
+            font-family: 'Zen+Old+Mincho', serif;
+            font-size: 2.5rem;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        header p {
+            font-style: italic;
+            opacity: 0.8;
+            font-weight: 300;
+        }
+
+        .container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            max-width: 1200px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            padding: 40px 30px;
+            width: 280px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 45px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .card h2 {
+            font-family: 'Zen+Old+Mincho', serif;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: #4a4a4a;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            height: 60px;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: opacity 0.3s;
+            color: #5a6b7d;
+            border: 1px solid #dee2e6;
+        }
+
+        .btn:hover {
+            opacity: 0.7;
+        }
+
+        /* Kartlara özel pastel dokunuşlar */
+        .card:nth-child(1) { border-bottom: 5px solid var(--accent-pink); }
+        .card:nth-child(2) { border-bottom: 5px solid var(--accent-blue); }
+        .card:nth-child(3) { border-bottom: 5px solid var(--accent-mint); }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        footer {
+            margin-top: 60px;
+            font-size: 0.8rem;
+            opacity: 0.5;
+            letter-spacing: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .container { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>THE CORE ZEN</h1>
+        <p>Zihin, Dil ve Ruhun Estetik Buluşması</p>
+    </header>
+
+    <div class="container">
+        <!-- NeuroVibe Kartı -->
+        <div class="card">
+            <div>
+                <h2>NeuroVibe</h2>
+                <p>Duygularını izle, odağını yönet ve içsel dengeni modern bir ritimle yakala.</p>
+            </div>
+            <!-- LİNKİ BURAYA EKLE -->
+            <a href="https://KULLANICI_ADIN.github.io/NeuroVibe/" class="btn">Keşfet</a>
+        </div>
+
+        <!-- VibeMatch Kartı -->
+        <div class="card">
+            <div>
+                <h2>VibeMatch</h2>
+                <p>İngilizce öğrenimini senaryolarla eşleştir; dil öğrenmeyi bir akışa dönüştür.</p>
+            </div>
+            <!-- LİNKİ BURAYA EKLE -->
+            <a href="https://KULLANICI_ADIN.github.io/VibeMatch/" class="btn">Pratik Yap</a>
+        </div>
+
+        <!-- VibeMotto Kartı -->
+        <div class="card">
+            <div>
+                <h2>VibeMotto</h2>
+                <p>Her günün bir cümlesi var. Estetik bir sayfa içinde ruhunu besleyen mottolar.</p>
+            </div>
+            <!-- LİNKİ BURAYA EKLE -->
+            <a href="https://KULLANICI_ADIN.github.io/VibeMotto/" class="btn">İlham Al</a>
+        </div>
+    </div>
+
+    <footer>
+        DESIGNED WITH WU WEI PHILOSOPHY
+    </footer>
+
+</body>
+</html>
