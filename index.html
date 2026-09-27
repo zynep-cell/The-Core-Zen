@@ -13,25 +13,27 @@
             --accent-pink: #f7d9d9;
             --accent-blue: #d9e4f7;
             --accent-mint: #d9f7ed;
+            --accent-peach: #fce1d4;
+            --accent-lavender: #e8dff5;
+            --accent-gold: #fcf4dd;
         }
 
         body {
             margin: 0;
-            padding: 0;
+            padding: 40px 0;
             font-family: 'Quicksand', sans-serif;
             background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
             color: var(--text-color);
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             min-height: 100vh;
             overflow-x: hidden;
         }
 
         header {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
             animation: fadeIn 2s ease-in;
         }
 
@@ -90,7 +92,7 @@
             font-size: 0.95rem;
             line-height: 1.6;
             margin-bottom: 25px;
-            height: 60px;
+            min-height: 60px;
         }
 
         .btn {
@@ -109,10 +111,13 @@
             opacity: 0.7;
         }
 
-        /* Kartlara özel pastel dokunuşlar */
-        .card:nth-child(1) { border-bottom: 5px solid var(--accent-pink); }
-        .card:nth-child(2) { border-bottom: 5px solid var(--accent-blue); }
-        .card:nth-child(3) { border-bottom: 5px solid var(--accent-mint); }
+        /* Yeni eklenen kartların alt çizgileri otomatik pastel renk alır */
+        .card:nth-child(6n+1) { border-bottom: 5px solid var(--accent-pink); }
+        .card:nth-child(6n+2) { border-bottom: 5px solid var(--accent-blue); }
+        .card:nth-child(6n+3) { border-bottom: 5px solid var(--accent-mint); }
+        .card:nth-child(6n+4) { border-bottom: 5px solid var(--accent-peach); }
+        .card:nth-child(6n+5) { border-bottom: 5px solid var(--accent-lavender); }
+        .card:nth-child(6n+6) { border-bottom: 5px solid var(--accent-gold); }
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
@@ -139,35 +144,93 @@
     </header>
 
     <div class="container">
-        <!-- NeuroVibe Kartı -->
+        <!-- 1. NeuroVibe -->
         <div class="card">
             <div>
                 <h2>NeuroVibe</h2>
                 <p>Duygularını izle, odağını yönet ve içsel dengeni modern bir ritimle yakala.</p>
             </div>
-            <!-- LİNKİ BURAYA EKLE -->
             <a href="https://zynep-cell.github.io/neurovibe/" class="btn">Keşfet</a>
         </div>
 
-        <!-- VibeMatch Kartı -->
+        <!-- 2. VibeMatch -->
         <div class="card">
             <div>
                 <h2>VibeMatch</h2>
                 <p>İngilizce öğrenimini senaryolarla eşleştir; dil öğrenmeyi bir akışa dönüştür.</p>
             </div>
-            <!-- LİNKİ BURAYA EKLE -->
             <a href="https://zynep-cell.github.io/VibeMatch/" class="btn">Pratik Yap</a>
         </div>
 
-        <!-- VibeMotto Kartı -->
+        <!-- 3. VibeMotto -->
         <div class="card">
             <div>
                 <h2>VibeMotto</h2>
                 <p>Her günün bir cümlesi var. Estetik bir sayfa içinde ruhunu besleyen mottolar.</p>
             </div>
-            <!-- LİNKİ BURAYA EKLE -->
             <a href="https://zynep-cell.github.io/VibeMotto/" class="btn">İlham Al</a>
         </div>
+
+        <!-- ÖRNEK 1: VibeAtelier (Kullanmak istersen hazır) -->
+        <div class="card">
+            <div>
+                <h2>VibeAtelier</h2>
+                <p>Kelimelerle evrene pozitif enerji gönder, fırçaları aç ve dostunu büyüt.</p>
+            </div>
+            <a href="https://zynep-cell.github.io/VibeAtelier/" class="btn">Atölyeye Gir</a>
+        </div>
+
+        <!-- ÖRNEK 2: YENİ PROJE ŞABLONU (Bunu kopyalayıp çoğaltabilirsin) -->
+        <!--
+        <div class="card">
+            <div>
+                <h2>Pencere Radarı/h2>
+                <p>Bugün toprağı değil, iklimi gözlemle.</p>
+            </div>
+            <a href="https://zynep-cell.github.io/Pencere-Radari/" class="btn">Gözlemle</a>
+        </div>
+
+        <div class="card">
+    <div>
+        <h2>Habit Tracker</h2>
+        <p>%1 better,everyday.</p>
+    </div>
+    <a href="https://zynep-cell.github.io/the-core-habits-tracker/" class="btn">Başla</a>
+</div>
+
+        <div class="card">
+    <div>
+        <h2>Vizyon ve Atmosfer Arşivi</h2>
+        <p>Gözlerini kapat, geleceği hayal et ve yeni bir atmosfer yarat.</p>
+    </div>
+    <a href="https://zynep-cell.github.io/Vizyon-ve-Atmosfer-Arsivi/#" class="btn">Vizyonla</a>
+</div>
+
+        <div class="card">
+    <div>
+        <h2>Shibumi Odak</h2>
+        <p>Minimalist Flashcard Sistemi.</p>
+    </div>
+    <a href="https://zynep-cell.github.io/flashcard/" class="btn">Odaklan</a>
+</div>
+
+        <div class="card">
+    <div>
+        <h2>RetroNow 0.6</h2>
+        <p>Bir fotoğraf yükleyerek başla.</p>
+    </div>
+    <a href="https://zynep-cell.github.io/RetroNow0.6/" class="btn">RetroNowla</a>
+</div>
+
+        <div class="card">
+    <div>
+        <h2>Coğrafya Hafıza Merkezi</h2>
+        <p>Türkiye'nin Coğrafyasını Keşfet.</p>
+    </div>
+    <a href="https://zynep-cell.github.io/kpss-maps/index.html" class="btn">Keşfet</a>
+</div>
+        -->
+
     </div>
 
     <footer>
